@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html><head>
+	<title>DVB-T2 Modulator Calc ($Revision: 1910 $)</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<style type="text/css">
+		body {font-family:verdana;}
+	</style>
+	<script type="text/javascript">
+		Math.log10 = function (x) { return Math.log(x) / Math.LN10; };
+		function addition(){
+			d32 = 4294967296;
+			smax = d32;
+			ngc_gain = 4;
+			ngc_width = 16;
+			ngc_ref = 4096;
+			ref=Number(document.calculator.number1.value);
+			fout=Number(document.calculator.number2.value);
+			ngc_db=Number(document.calculator.number3.value);
+
+			ifreq = Math.round(fout/ref*d32);
+			ngc_shift = Math.pow(2, ngc_width-ngc_gain)
+			igain = Math.round(Math.pow(10, ngc_db/20)*ngc_shift-ngc_ref);
+			sat = (igain+ngc_ref) >= Math.pow(2, ngc_width-1);
+
+			document.calculator.total1.value=ifreq;
+			document.calculator.total2.value=sat ? "Decrease Gain (err)" : igain;
+			document.calculator.total3.value=ref/d32*ifreq;
+			document.calculator.total4.value=sat ? "Decrease Gain (err)" : 20*Math.log10((igain+ngc_ref)/ngc_shift);
+		}
+	</script>
+</head><body>
+	<form name="calculator" action="#"><table>
+	<tr><td style="background-color:yellow;color:blue;">Input Settings</td>		<td></td></tr>
+	<tr><td>Fsys (iclk):</td>							<td><input type="text" name="number1" value="146285714.28571"/>Hz</td></tr>
+	<tr><td>Intermediate Frequency:</td>				<td><input type="text" name="number2" value="36571000"/>Hz</td></tr>
+	<tr><td>Output Power Gain:</td>						<td><input type="text" name="number3" value="+3"/>dB</td></tr>
+
+	<tr><td style="background-color:yellow;color:blue;">Output Results</td>		<td></td></tr>
+	<tr><td>Mixer (ifreq):</td>							<td><input type="text" style="background-color:#B8E0E0;" name="total1" readonly="readonly"/></td></tr>
+	<tr><td>NGC (igain):</td>							<td><input type="text" style="background-color:#B8E0E0;" name="total2" readonly="readonly"/></td></tr>
+	<tr><td style="background-color:yellow;color:blue;">Actual Values</td>		<td></td></tr>
+	<tr><td>Intermediate Frequency actual:</td>			<td><input type="text" style="background-color:#B8E0E0;" name="total3" readonly="readonly"/>Hz</td></tr>
+	<tr><td>Output Power Gain actual:</td>				<td><input type="text" style="background-color:#B8E0E0;" name="total4" readonly="readonly"/>dB</td></tr>
+	<tr><td><input type="button" value="Calculate result" style="padding:14px;" onclick="javascript:addition();"/></td><td/></tr>
+	</table></form>
+</body>
+</html>

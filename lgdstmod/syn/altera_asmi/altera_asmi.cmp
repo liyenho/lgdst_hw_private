@@ -1,0 +1,15 @@
+	component altera_asmi is
+		port (
+			addr       : in  std_logic_vector(31 downto 0) := (others => 'X'); -- addr
+			busy       : out std_logic;                                        -- busy
+			clkin      : in  std_logic                     := 'X';             -- clk
+			data_valid : out std_logic;                                        -- data_valid
+			dataout    : out std_logic_vector(7 downto 0);                     -- dataout
+			en4b_addr  : in  std_logic                     := 'X';             -- en4b_addr
+			rden       : in  std_logic                     := 'X';             -- rden
+			read       : in  std_logic                     := 'X';             -- read
+			reset      : in  std_logic                     := 'X';             -- reset
+			wren       : in  std_logic                     := 'X'              -- wren
+		);
+	end component altera_asmi;
+

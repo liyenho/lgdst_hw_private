@@ -1,0 +1,25 @@
+
+# Project-Wide Assignments
+# ========================
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 6.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:43:43 AUGUST 09, 2006"
+set_global_assignment -name LAST_QUARTUS_VERSION 15.1.0
+set_global_assignment -name QXP_FILE tx.qxp
+set_global_assignment -name VERILOG_FILE top5ceba4u15va.v
+set_global_assignment -name VERILOG_FILE tspattern.v
+set_global_assignment -name SDC_FILE top5ceba4u15va.sdc
+
+# Classic Timing Assignments
+# ==========================
+set_global_assignment -name TIMEQUEST_DO_REPORT_TIMING ON
+
+# Analysis & Synthesis Assignments
+# ================================
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name TOP_LEVEL_ENTITY top5ceba4u15va
+set_global_assignment -name ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS OFF
+set_global_assignment -name AUTO_SHIFT_REGISTER_RECOGNITION OFF
+
+# Fitter Assignments
+# ==================
+set_global_assignment -name DEVICE 5CEBA4U15C8
