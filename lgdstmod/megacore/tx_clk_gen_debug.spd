@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<simPackage>
- <file path="tx_clk_gen_debug_sim/tx_clk_gen_debug.vo" type="VERILOG" />
- <topLevel name="tx_clk_gen_debug" />
- <deviceFamily name="cyclonev" />
-</simPackage>

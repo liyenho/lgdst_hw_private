@@ -1,1 +1,0 @@
-elf2hex --record=4 lgdst2.elf 0x00000000 0x0002ffff --width=32 --little-endian-mem --create-lanes=0 mem_init/system_bd_onchip_ram.hex

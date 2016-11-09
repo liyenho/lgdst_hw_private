@@ -1,1 +1,0 @@
-tx_clk_gen2_sim/tx_clk_gen2.vo
