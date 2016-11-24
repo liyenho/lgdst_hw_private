@@ -6,193 +6,136 @@
 # vmap work rtl_work
 # Model Technology ModelSim ALTERA vmap 10.4b Lib Mapping Utility 2015.05 May 27 2015
 # vmap -modelsim_quiet work rtl_work 
-# Copying C:/Altera/15.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Copying G:/altera/15.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
-# ** Warning: Copied C:/Altera/15.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+# ** Warning: Copied G:/altera/15.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -vlog01compat -work work +incdir+C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/db {C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/db/io_buf.v}
+# vlog -vlog01compat -work work +incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl {F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl/i2c_dummy.v}
 # Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
-# Start time: 14:03:22 on Jun 23,2016
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/db" C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/db/io_buf.v 
-# -- Compiling module io_buf_iobuf_bidir_loo
-# -- Compiling module io_buf
+# Start time: 20:30:35 on Nov 22,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl" F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl/i2c_dummy.v 
+# -- Compiling module i2c_dummy
 # 
 # Top level modules:
-# 	io_buf
-# End time: 14:03:22 on Jun 23,2016, Elapsed time: 0:00:00
+# 	i2c_dummy
+# End time: 20:30:35 on Nov 22,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/rtl {/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/rtl/ver_info.v}
+# vlog -vlog01compat -work work +incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl {F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl/spi_prog.v}
 # Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
-# Start time: 14:03:22 on Jun 23,2016
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/rtl" C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/rtl/ver_info.v 
-# End time: 14:03:22 on Jun 23,2016, Elapsed time: 0:00:00
+# Start time: 20:30:35 on Nov 22,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl" F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl/spi_prog.v 
+# -- Compiling module spi_prog
+# 
+# Top level modules:
+# 	spi_prog
+# End time: 20:30:35 on Nov 22,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/rtl {C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/rtl/lgdst_rxglue.v}
+# vlog -vlog01compat -work work +incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/syn {F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/flash_pll.v}
 # Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
-# Start time: 14:03:22 on Jun 23,2016
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/rtl" C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/rtl/lgdst_rxglue.v 
+# Start time: 20:30:35 on Nov 22,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/syn" F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/flash_pll.v 
+# -- Compiling module flash_pll
+# 
+# Top level modules:
+# 	flash_pll
+# End time: 20:30:35 on Nov 22,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/db {F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/db/flash_pll_altpll.v}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 20:30:38 on Nov 22,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/db" F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/db/flash_pll_altpll.v 
+# -- Compiling module flash_pll_altpll
+# 
+# Top level modules:
+# 	flash_pll_altpll
+# End time: 20:30:38 on Nov 22,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlib onchip_flash
+# ** Warning: (vlib-34) Library already exists at "onchip_flash".
+# 
+# vmap onchip_flash onchip_flash
+# Model Technology ModelSim ALTERA vmap 10.4b Lib Mapping Utility 2015.05 May 27 2015
+# vmap -modelsim_quiet onchip_flash onchip_flash 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work onchip_flash +incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis {F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/onchip_flash.v}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 20:30:38 on Nov 22,2016
+# vlog -reportprogress 300 -vlog01compat -work onchip_flash "+incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis" F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/onchip_flash.v 
+# -- Compiling module onchip_flash
+# 
+# Top level modules:
+# 	onchip_flash
+# End time: 20:30:38 on Nov 22,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work onchip_flash +incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules {F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules/altera_onchip_flash_util.v}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 20:30:38 on Nov 22,2016
+# vlog -reportprogress 300 -vlog01compat -work onchip_flash "+incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules" F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules/altera_onchip_flash_util.v 
+# -- Compiling module altera_onchip_flash_address_range_check
+# -- Compiling module altera_onchip_flash_address_write_protection_check
+# -- Compiling module altera_onchip_flash_convert_address
+# -- Compiling module altera_onchip_flash_convert_sector
+# -- Compiling module altera_onchip_flash_counter
+# 
+# Top level modules:
+# 	altera_onchip_flash_address_range_check
+# 	altera_onchip_flash_address_write_protection_check
+# 	altera_onchip_flash_convert_address
+# 	altera_onchip_flash_convert_sector
+# 	altera_onchip_flash_counter
+# End time: 20:30:38 on Nov 22,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work onchip_flash +incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules {F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules/altera_onchip_flash.v}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 20:30:38 on Nov 22,2016
+# vlog -reportprogress 300 -vlog01compat -work onchip_flash "+incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules" F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules/altera_onchip_flash.v 
+# -- Compiling module altera_onchip_flash
+# 
+# Top level modules:
+# 	altera_onchip_flash
+# End time: 20:30:39 on Nov 22,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work onchip_flash +incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules {F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules/altera_onchip_flash_avmm_data_controller.v}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 20:30:39 on Nov 22,2016
+# vlog -reportprogress 300 -vlog01compat -work onchip_flash "+incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules" F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules/altera_onchip_flash_avmm_data_controller.v 
+# -- Compiling module altera_onchip_flash_avmm_data_controller
+# 
+# Top level modules:
+# 	altera_onchip_flash_avmm_data_controller
+# End time: 20:30:39 on Nov 22,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work onchip_flash +incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules {F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules/altera_onchip_flash_avmm_csr_controller.v}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 20:30:39 on Nov 22,2016
+# vlog -reportprogress 300 -vlog01compat -work onchip_flash "+incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules" F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules/altera_onchip_flash_avmm_csr_controller.v 
+# -- Compiling module altera_onchip_flash_avmm_csr_controller
+# 
+# Top level modules:
+# 	altera_onchip_flash_avmm_csr_controller
+# End time: 20:30:39 on Nov 22,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl {F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl/lgdst_rxglue.v}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 20:30:39 on Nov 22,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl" F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl/lgdst_rxglue.v 
 # -- Compiling module lgdst_rxglue
+# ** Error: F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl/lgdst_rxglue.v(88): (vlog-2730) Undefined variable: 'data_start'.
 # 
-# Top level modules:
-# 	lgdst_rxglue
-# End time: 14:03:22 on Jun 23,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+# ** Error: F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl/lgdst_rxglue.v(88): (vlog-2730) Undefined variable: 'spi0_miso_ver'.
 # 
-# vlog -vlog01compat -work work +incdir+C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench {C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v}
-# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
-# Start time: 14:03:22 on Jun 23,2016
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench" C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v 
-# -- Compiling module test_lgdst_rxglue
+# ** Error (suppressible): F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl/lgdst_rxglue.v(99): (vlog-2388) 'data_start' already declared in this scope (lgdst_rxglue).
 # 
-# Top level modules:
-# 	test_lgdst_rxglue
-# End time: 14:03:22 on Jun 23,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+# ** Error (suppressible): F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl/lgdst_rxglue.v(103): (vlog-2388) 'spi0_miso_ver' already declared in this scope (lgdst_rxglue).
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  test_lgdst_rxglue
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" test_lgdst_rxglue 
-# Start time: 14:03:22 on Jun 23,2016
-# Loading work.test_lgdst_rxglue
-# Loading work.lgdst_rxglue
-# Loading work.io_buf
-# Loading work.io_buf_iobuf_bidir_loo
-# ** Warning: (vsim-3017) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Too few port connections. Expected 25, found 16.
-#    Time: 0 ps  Iteration: 0  Instance: /test_lgdst_rxglue/i_dut File: C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/rtl/lgdst_rxglue.v
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Missing connection for port 'resync_n'.
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Missing connection for port 'led_wifi'.
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Missing connection for port 'tp_42'.
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Missing connection for port 'tp_50'.
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Missing connection for port 'gpio2'.
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Missing connection for port 'gpio3'.
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Missing connection for port 'rf_sw3'.
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Missing connection for port 'rf_sw4'.
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Missing connection for port 'cnt_in'.
-# ** Warning: (vsim-3017) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/db/io_buf.v(61): [TFMPC] - Too few port connections. Expected 4, found 3.
-#    Time: 0 ps  Iteration: 0  Instance: /test_lgdst_rxglue/i_dut/io_buf/io_buf_iobuf_bidir_loo_component/ibufa_0 File: nofile
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/db/io_buf.v(61): [TFMPC] - Missing connection for port 'nsleep'.
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# ** Note: $stop    : C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(150)
-#    Time: 351501 ns  Iteration: 0  Instance: /test_lgdst_rxglue
-# Break in Module test_lgdst_rxglue at C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v line 150
-add wave -position 13  sim:/test_lgdst_rxglue/i_dut/version
-add wave -position 14  sim:/test_lgdst_rxglue/i_dut/spi0_miso_io
-restart
-# ** Warning: (vsim-3017) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Too few port connections. Expected 25, found 16.
-#    Time: 0 ps  Iteration: 0  Instance: /test_lgdst_rxglue/i_dut File: C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/rtl/lgdst_rxglue.v
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Missing connection for port 'resync_n'.
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Missing connection for port 'led_wifi'.
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Missing connection for port 'tp_42'.
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Missing connection for port 'tp_50'.
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Missing connection for port 'gpio2'.
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Missing connection for port 'gpio3'.
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Missing connection for port 'rf_sw3'.
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Missing connection for port 'rf_sw4'.
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Missing connection for port 'cnt_in'.
-# ** Warning: (vsim-3017) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/db/io_buf.v(61): [TFMPC] - Too few port connections. Expected 4, found 3.
-#    Time: 0 ps  Iteration: 0  Instance: /test_lgdst_rxglue/i_dut/io_buf/io_buf_iobuf_bidir_loo_component/ibufa_0 File: nofile
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/db/io_buf.v(61): [TFMPC] - Missing connection for port 'nsleep'.
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-add wave -position 3  sim:/test_lgdst_rxglue/i_dut/spi0_spck
-add wave -position 4  sim:/test_lgdst_rxglue/i_dut/data_start
-restart
-# ** Warning: (vsim-3017) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Too few port connections. Expected 25, found 16.
-#    Time: 0 ps  Iteration: 0  Instance: /test_lgdst_rxglue/i_dut File: C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/rtl/lgdst_rxglue.v
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Missing connection for port 'resync_n'.
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Missing connection for port 'led_wifi'.
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Missing connection for port 'tp_42'.
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Missing connection for port 'tp_50'.
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Missing connection for port 'gpio2'.
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Missing connection for port 'gpio3'.
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Missing connection for port 'rf_sw3'.
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Missing connection for port 'rf_sw4'.
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v(30): [TFMPC] - Missing connection for port 'cnt_in'.
-# ** Warning: (vsim-3017) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/db/io_buf.v(61): [TFMPC] - Too few port connections. Expected 4, found 3.
-#    Time: 0 ps  Iteration: 0  Instance: /test_lgdst_rxglue/i_dut/io_buf/io_buf_iobuf_bidir_loo_component/ibufa_0 File: nofile
-# ** Warning: (vsim-3722) C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/db/io_buf.v(61): [TFMPC] - Missing connection for port 'nsleep'.
-run
-run
-run
-run
-run
-run
-run
-run
-run
-# End time: 14:13:16 on Jun 23,2016, Elapsed time: 0:09:54
-# Errors: 0, Warnings: 36
+# -- Compiling module spi5_bypass
+# -- Compiling module ts_pattern
+# -- Compiling module null_filter
+# End time: 20:30:40 on Nov 22,2016, Elapsed time: 0:00:01
+# Errors: 4, Warnings: 0
+# ** Error: G:/altera/15.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./lgdst_rxglue_run_msim_rtl_verilog.do line 19
+# G:/altera/15.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -vlog01compat -work work +incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl {F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl/lgdst_rxglue.v}"

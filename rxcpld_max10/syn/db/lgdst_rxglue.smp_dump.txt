@@ -1,0 +1,37 @@
+
+State Machine - |lgdst_rxglue|spi_prog:i_ufm_spi|avmm_csr_fsm_cs
+Name avmm_csr_fsm_cs.00 avmm_csr_fsm_cs.10 avmm_csr_fsm_cs.01 
+avmm_csr_fsm_cs.00 0 0 0 
+avmm_csr_fsm_cs.01 1 0 1 
+avmm_csr_fsm_cs.10 1 1 0 
+
+State Machine - |lgdst_rxglue|spi_prog:i_ufm_spi|avmm_dat_fsm_cs
+Name avmm_dat_fsm_cs.110 avmm_dat_fsm_cs.101 avmm_dat_fsm_cs.100 avmm_dat_fsm_cs.011 avmm_dat_fsm_cs.010 avmm_dat_fsm_cs.001 avmm_dat_fsm_cs.000 
+avmm_dat_fsm_cs.000 0 0 0 0 0 0 0 
+avmm_dat_fsm_cs.001 0 0 0 0 0 1 1 
+avmm_dat_fsm_cs.010 0 0 0 0 1 0 1 
+avmm_dat_fsm_cs.011 0 0 0 1 0 0 1 
+avmm_dat_fsm_cs.100 0 0 1 0 0 0 1 
+avmm_dat_fsm_cs.101 0 1 0 0 0 0 1 
+avmm_dat_fsm_cs.110 1 0 0 0 0 0 1 
+
+State Machine - |lgdst_rxglue|spi_prog:i_ufm_spi|spi_fsm_cs
+Name spi_fsm_cs.0111 spi_fsm_cs.0110 spi_fsm_cs.0100 spi_fsm_cs.0011 spi_fsm_cs.0001 spi_fsm_cs.0000 
+spi_fsm_cs.0000 0 0 0 0 0 0 
+spi_fsm_cs.0001 0 0 0 0 1 1 
+spi_fsm_cs.0011 0 0 0 1 0 1 
+spi_fsm_cs.0100 0 0 1 0 0 1 
+spi_fsm_cs.0110 0 1 0 0 0 1 
+spi_fsm_cs.0111 1 0 0 0 0 1 
+
+State Machine - |lgdst_rxglue|spi_prog:i_ufm_spi|onchip_flash:i_flash|altera_onchip_flash:onchip_flash_0|altera_onchip_flash_avmm_data_controller:avmm_data_controller|op_state
+Name op_state.OP_STATE_WAIT_DONE op_state.OP_STATE_WAIT_BUSY op_state.OP_STATE_WRITE op_state.OP_STATE_CLEAR op_state.OP_STATE_READ_DATA op_state.OP_STATE_READ_SHIFT op_state.OP_STATE_ADDR op_state.OP_STATE_IDLE op_state.OP_STATE_RESET 
+op_state.OP_STATE_IDLE 0 0 0 0 0 0 0 0 0 
+op_state.OP_STATE_ADDR 0 0 0 0 0 0 1 1 0 
+op_state.OP_STATE_READ_SHIFT 0 0 0 0 0 1 0 1 0 
+op_state.OP_STATE_READ_DATA 0 0 0 0 1 0 0 1 0 
+op_state.OP_STATE_CLEAR 0 0 0 1 0 0 0 1 0 
+op_state.OP_STATE_WRITE 0 0 1 0 0 0 0 1 0 
+op_state.OP_STATE_WAIT_BUSY 0 1 0 0 0 0 0 1 0 
+op_state.OP_STATE_WAIT_DONE 1 0 0 0 0 0 0 1 0 
+op_state.OP_STATE_RESET 0 0 0 0 0 0 0 1 1 

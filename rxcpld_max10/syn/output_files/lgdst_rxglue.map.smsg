@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at lgdst_rxglue.v(325): always construct contains both blocking and non-blocking assignments File: D:/sncvs/cpld/working/rxcpld161013_v2_max10/rtl/lgdst_rxglue.v Line: 325
+Warning (10268): Verilog HDL information at lgdst_rxglue.v(400): always construct contains both blocking and non-blocking assignments File: D:/sncvs/cpld/working/rxcpld161013_v2_max10/rtl/lgdst_rxglue.v Line: 400

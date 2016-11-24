@@ -1,0 +1,199 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/github/lgdst_hw/rxcpld161121_v2_max10/syn/simulation/modelsim
+valtera_onchip_flash
+Z1 !s110 1479875439
+!i10b 1
+!s100 Hl1eYSboRCZSMee1UR@3=1
+INX@5OXmN3Bin7AL42QfU;0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1476412166
+8F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules/altera_onchip_flash.v
+FF:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules/altera_onchip_flash.v
+Z4 L0 38
+Z5 OV;L;10.4b;61
+r1
+!s85 0
+31
+Z6 !s108 1479875438.000000
+!s107 F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules/altera_onchip_flash.v|
+!s90 -reportprogress|300|-vlog01compat|-work|onchip_flash|+incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules|F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules/altera_onchip_flash.v|
+!i113 1
+Z7 o-vlog01compat -work onchip_flash
+Z8 !s92 -vlog01compat -work onchip_flash +incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules
+valtera_onchip_flash_address_range_check
+Z9 !s110 1479875438
+!i10b 1
+!s100 TLLaN^gJ>Hg4I=f3HXaDo3
+IWjSzO^n@C5k3MgfaW`4aY2
+R2
+R0
+R3
+Z10 8F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules/altera_onchip_flash_util.v
+Z11 FF:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules/altera_onchip_flash_util.v
+R4
+R5
+r1
+!s85 0
+31
+R6
+Z12 !s107 F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules/altera_onchip_flash_util.v|
+Z13 !s90 -reportprogress|300|-vlog01compat|-work|onchip_flash|+incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules|F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules/altera_onchip_flash_util.v|
+!i113 1
+R7
+R8
+valtera_onchip_flash_address_write_protection_check
+R9
+!i10b 1
+!s100 YfFP9U9SI7C=TCAPUTNCE3
+ILKgQcHDKBnKjT@7cJgV_20
+R2
+R0
+R3
+R10
+R11
+L0 55
+R5
+r1
+!s85 0
+31
+R6
+R12
+R13
+!i113 1
+R7
+R8
+valtera_onchip_flash_avmm_csr_controller
+R1
+!i10b 1
+!s100 c8S4@g_lU_3eV7XQUM0LQ0
+I5aN]R@<2h2P`ColCkdZOV0
+R2
+R0
+R3
+8F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules/altera_onchip_flash_avmm_csr_controller.v
+FF:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules/altera_onchip_flash_avmm_csr_controller.v
+R4
+R5
+r1
+!s85 0
+31
+Z14 !s108 1479875439.000000
+!s107 F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules/altera_onchip_flash_avmm_csr_controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|onchip_flash|+incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules|F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules/altera_onchip_flash_avmm_csr_controller.v|
+!i113 1
+R7
+R8
+valtera_onchip_flash_avmm_data_controller
+R1
+!i10b 1
+!s100 Jm?0DBiX^j;g3HEgD3_h`3
+I<j?@;oJnN:_cK1n`CRDc`2
+R2
+R0
+R3
+8F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules/altera_onchip_flash_avmm_data_controller.v
+FF:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules/altera_onchip_flash_avmm_data_controller.v
+R4
+R5
+r1
+!s85 0
+31
+R14
+!s107 F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules/altera_onchip_flash_avmm_data_controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|onchip_flash|+incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules|F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/submodules/altera_onchip_flash_avmm_data_controller.v|
+!i113 1
+R7
+R8
+valtera_onchip_flash_convert_address
+R9
+!i10b 1
+!s100 l5W_QSJ;3eCoZ^JM4J`RF2
+IJzd0_NbAzQ^bSKUmQ4WmJ2
+R2
+R0
+R3
+R10
+R11
+L0 110
+R5
+r1
+!s85 0
+31
+R6
+R12
+R13
+!i113 1
+R7
+R8
+valtera_onchip_flash_convert_sector
+R9
+!i10b 1
+!s100 HiA4hS_^aLf7lhOf;_`Gk3
+I10=3eo86L[W0mY;Szm98d2
+R2
+R0
+R3
+R10
+R11
+L0 130
+R5
+r1
+!s85 0
+31
+R6
+R12
+R13
+!i113 1
+R7
+R8
+valtera_onchip_flash_counter
+R9
+!i10b 1
+!s100 TE8=3[H_V[JSF6:7HzdE;0
+IYQMXazV3Z<3[6cifQ09G60
+R2
+R0
+R3
+R10
+R11
+L0 155
+R5
+r1
+!s85 0
+31
+R6
+R12
+R13
+!i113 1
+R7
+R8
+vonchip_flash
+R9
+!i10b 1
+!s100 M3]b8]i=dRU>j>1Q:AIoF3
+ITULXZ6LSC1UdGgYM8NhN90
+R2
+R0
+R3
+8F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/onchip_flash.v
+FF:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/onchip_flash.v
+L0 6
+R5
+r1
+!s85 0
+31
+R6
+!s107 F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/onchip_flash.v|
+!s90 -reportprogress|300|-vlog01compat|-work|onchip_flash|+incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis|F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis/onchip_flash.v|
+!i113 1
+R7
+!s92 -vlog01compat -work onchip_flash +incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/onchip_flash/synthesis

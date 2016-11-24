@@ -7,88 +7,151 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/simulation/modelsim
-vio_buf
-Z1 !s110 1466715802
+Z0 dF:/github/lgdst_hw/rxcpld161121_v2_max10/syn/simulation/modelsim
+vflash_pll
+Z1 !s110 1479875435
 !i10b 1
-!s100 zV>BjcN?mVZd4KWFVU;X12
-IDAIHHECC6Nb^_dS03mk9e3
+!s100 6FR^>>QTQeQgdHW09N9nC0
+IPRVS9MoQiKM8EU]]2D0ZA0
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1466714940
-Z4 8C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/db/io_buf.v
-Z5 FC:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/db/io_buf.v
-L0 111
-Z6 OV;L;10.4b;61
+w1476411414
+8F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/flash_pll.v
+FF:/github/lgdst_hw/rxcpld161121_v2_max10/syn/flash_pll.v
+L0 40
+Z3 OV;L;10.4b;61
 r1
 !s85 0
 31
-Z7 !s108 1466715802.000000
-Z8 !s107 C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/db/io_buf.v|
-Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/db|C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/db/io_buf.v|
+Z4 !s108 1479875435.000000
+!s107 F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/flash_pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/syn|F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/flash_pll.v|
 !i113 1
-Z10 o-vlog01compat -work work
-Z11 !s92 -vlog01compat -work work +incdir+C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/db
-vio_buf_iobuf_bidir_loo
-R1
+Z5 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/syn
+vflash_pll_altpll
+!s110 1479875438
 !i10b 1
-!s100 G0l4Dm17o5glomGDf>Uz80
-IP>jTe13<dji?^4U6ABJGU0
+!s100 zbPX7MgTSELl5;N_jgDHn0
+IhOJe<jGm3MG9VPQ1D<SIJ2
 R2
 R0
+w1479160158
+8F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/db/flash_pll_altpll.v
+FF:/github/lgdst_hw/rxcpld161121_v2_max10/syn/db/flash_pll_altpll.v
+L0 30
 R3
-R4
-R5
-L0 47
-R6
 r1
 !s85 0
 31
+!s108 1479875438.000000
+!s107 F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/db/flash_pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/db|F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/db/flash_pll_altpll.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/syn/db
+vi2c_dummy
+R1
+!i10b 1
+!s100 PKY4QhJ=XL_hA7OGnUKU92
+IXK>nF2HIWLWF4FTC1e5U=0
+R2
+R0
+w1459670244
+8F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl/i2c_dummy.v
+FF:/github/lgdst_hw/rxcpld161121_v2_max10/rtl/i2c_dummy.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl/i2c_dummy.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl|F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl/i2c_dummy.v|
+!i113 1
+R5
+Z6 !s92 -vlog01compat -work work +incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl
+vnull_filter
+Z7 !s110 1479875440
+!i10b 1
+!s100 G?>^LG>;YK1jKzCK>HO3M2
+IZdIOaZb]c>CIAm_cK3S;^1
+R2
+R0
+Z8 w1479773814
+Z9 8F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl/lgdst_rxglue.v
+Z10 FF:/github/lgdst_hw/rxcpld161121_v2_max10/rtl/lgdst_rxglue.v
+L0 506
+R3
+r1
+!s85 0
+31
+Z11 !s108 1479875439.000000
+Z12 !s107 F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl/ver_info.v|F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl/lgdst_rxglue.v|
+Z13 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl|F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl/lgdst_rxglue.v|
+!i113 1
+R5
+R6
+vspi5_bypass
 R7
+!i10b 1
+!s100 `jioOAfeg@?PS9la3@H:01
+I0G>1Aai5gLlKcGB@eVOFN2
+R2
+R0
 R8
 R9
-!i113 1
 R10
+L0 448
+R3
+r1
+!s85 0
+31
 R11
-vlgdst_rxglue
-R1
-!i10b 1
-!s100 :1=Kh^O9[Ln4_o[5=N[a93
-Ij4:[<H>;7=@G_K297<VS]0
-R2
-R0
-w1466714911
-8C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/rtl/lgdst_rxglue.v
-FC:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/rtl/lgdst_rxglue.v
-L0 8
-R6
-r1
-!s85 0
-31
-R7
-!s107 C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/rtl/ver_info.v|C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/rtl/lgdst_rxglue.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/rtl|C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/rtl/lgdst_rxglue.v|
+R12
+R13
 !i113 1
-R10
-!s92 -vlog01compat -work work +incdir+C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/rtl
-vtest_lgdst_rxglue
+R5
+R6
+vspi_prog
 R1
 !i10b 1
-!s100 IIEl>OaVl@3;WdPdDPcE_2
-IlfkblIg@;<zb`:MIoZ[^=2
+!s100 jZ2nSG7Ed]R5fQ<[>PEI51
+I]?Oc>3Ck?`H>N8d<=lIg93
 R2
 R0
-w1464988813
-8C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v
-FC:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v
+w1478901546
+8F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl/spi_prog.v
+FF:/github/lgdst_hw/rxcpld161121_v2_max10/rtl/spi_prog.v
 L0 3
-R6
+R3
 r1
 !s85 0
 31
-R7
-!s107 C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench|C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v|
+R4
+!s107 F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl/spi_prog.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl|F:/github/lgdst_hw/rxcpld161121_v2_max10/rtl/spi_prog.v|
 !i113 1
+R5
+R6
+vts_pattern
+R7
+!i10b 1
+!s100 z4bX?Pk?0UiiMKaYDNc2b0
+ICi@fKc8cGNjC=jUePogd^3
+R2
+R0
+R8
+R9
 R10
-!s92 -vlog01compat -work work +incdir+C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench
+L0 465
+R3
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 1
+R5
+R6

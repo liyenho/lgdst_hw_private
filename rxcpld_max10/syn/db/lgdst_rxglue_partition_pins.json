@@ -28,6 +28,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "i2c_scl",
+					"strict" : false
+				},
+				{
 					"name" : "led_wifi",
 					"strict" : false
 				},
@@ -52,15 +56,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "i2c_sda",
+					"strict" : false
+				},
+				{
+					"name" : "prog_en",
+					"strict" : false
+				},
+				{
 					"name" : "spi0_npcs0",
 					"strict" : false
 				},
 				{
 					"name" : "spi0_spck",
-					"strict" : false
-				},
-				{
-					"name" : "ts_clk",
 					"strict" : false
 				},
 				{
@@ -96,23 +104,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "ts_clk",
+					"strict" : false
+				},
+				{
 					"name" : "ts_d0",
 					"strict" : false
 				},
 				{
-					"name" : "altera_reserved_tms",
+					"name" : "i2c_base_clk",
 					"strict" : false
 				},
 				{
-					"name" : "altera_reserved_tck",
-					"strict" : false
-				},
-				{
-					"name" : "altera_reserved_tdi",
-					"strict" : false
-				},
-				{
-					"name" : "altera_reserved_tdo",
+					"name" : "i2c_trig",
 					"strict" : false
 				}
 			]

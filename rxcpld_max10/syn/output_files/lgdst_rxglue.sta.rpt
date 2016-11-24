@@ -1,0 +1,888 @@
+TimeQuest Timing Analyzer report for lgdst_rxglue
+Mon Nov 21 16:17:49 2016
+Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Slow 1200mV 85C Model Fmax Summary
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Metastability Summary
+ 13. Slow 1200mV 0C Model Fmax Summary
+ 14. Slow 1200mV 0C Model Setup Summary
+ 15. Slow 1200mV 0C Model Hold Summary
+ 16. Slow 1200mV 0C Model Recovery Summary
+ 17. Slow 1200mV 0C Model Removal Summary
+ 18. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 19. Slow 1200mV 0C Model Metastability Summary
+ 20. Fast 1200mV 0C Model Setup Summary
+ 21. Fast 1200mV 0C Model Hold Summary
+ 22. Fast 1200mV 0C Model Recovery Summary
+ 23. Fast 1200mV 0C Model Removal Summary
+ 24. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 25. Fast 1200mV 0C Model Metastability Summary
+ 26. Multicorner Timing Analysis Summary
+ 27. Board Trace Model Assignments
+ 28. Input Transition Times
+ 29. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 30. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 31. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 32. Setup Transfers
+ 33. Hold Transfers
+ 34. Recovery Transfers
+ 35. Removal Transfers
+ 36. Report TCCS
+ 37. Report RSKM
+ 38. Unconstrained Paths Summary
+ 39. Clock Status Summary
+ 40. Unconstrained Input Ports
+ 41. Unconstrained Output Ports
+ 42. Unconstrained Input Ports
+ 43. Unconstrained Output Ports
+ 44. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                               ;
++-----------------------+---------------------------------------------------------+
+; Quartus Prime Version ; Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition ;
+; Timing Analyzer       ; TimeQuest                                               ;
+; Revision Name         ; lgdst_rxglue                                            ;
+; Device Family         ; MAX 10                                                  ;
+; Device Name           ; 10M02SCM153C8G                                          ;
+; Timing Models         ; Final                                                   ;
+; Delay Model           ; Combined                                                ;
+; Rise/Fall Delays      ; Enabled                                                 ;
++-----------------------+---------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ; < 0.1%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; SDC File List                                                                                 ;
++-----------------------------------------------------------+--------+--------------------------+
+; SDC File Path                                             ; Status ; Read at                  ;
++-----------------------------------------------------------+--------+--------------------------+
+; onchip_flash/synthesis/submodules/altera_onchip_flash.sdc ; OK     ; Mon Nov 21 16:17:47 2016 ;
+; ../rtl/lgdst_rxglue.sdc                                   ; OK     ; Mon Nov 21 16:17:47 2016 ;
++-----------------------------------------------------------+--------+--------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
+; Clock Name ; Type ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets       ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
+; clk        ; Base ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }       ;
+; spi0_spclk ; Base ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { spi0_spck } ;
+; ts_clk     ; Base ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ts_clk }    ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
+
+
++-------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary              ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 42.44 MHz ; 42.44 MHz       ; spi0_spclk ;      ;
+; 84.26 MHz ; 84.26 MHz       ; clk        ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++------------+--------+---------------+
+; Clock      ; Slack  ; End Point TNS ;
++------------+--------+---------------+
+; spi0_spclk ; -1.782 ; -1.782        ;
+; n/a        ; -0.211 ; -0.211        ;
+; clk        ; 4.347  ; 0.000         ;
++------------+--------+---------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++------------+-------+---------------+
+; Clock      ; Slack ; End Point TNS ;
++------------+-------+---------------+
+; clk        ; 0.221 ; 0.000         ;
+; spi0_spclk ; 0.394 ; 0.000         ;
+; n/a        ; 9.999 ; 0.000         ;
++------------+-------+---------------+
+
+
++----------------------------------------+
+; Slow 1200mV 85C Model Recovery Summary ;
++------------+--------+------------------+
+; Clock      ; Slack  ; End Point TNS    ;
++------------+--------+------------------+
+; spi0_spclk ; 4.065  ; 0.000            ;
+; clk        ; 15.260 ; 0.000            ;
++------------+--------+------------------+
+
+
++---------------------------------------+
+; Slow 1200mV 85C Model Removal Summary ;
++------------+-------+------------------+
+; Clock      ; Slack ; End Point TNS    ;
++------------+-------+------------------+
+; clk        ; 1.017 ; 0.000            ;
+; spi0_spclk ; 5.401 ; 0.000            ;
++------------+-------+------------------+
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++------------+--------+-----------------------------+
+; Clock      ; Slack  ; End Point TNS               ;
++------------+--------+-----------------------------+
+; clk        ; 4.768  ; 0.000                       ;
+; spi0_spclk ; 9.706  ; 0.000                       ;
+; ts_clk     ; 16.000 ; 0.000                       ;
++------------+--------+-----------------------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+
+Number of Synchronizer Chains Found: 5
+Shortest Synchronizer Chain: 2 Registers
+Fraction of Chains for which MTBFs Could Not be Calculated: 0.600
+Worst Case Available Settling Time: 34.077 ns
+
+Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
+  - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.5
+Typical MTBF values are calculated based on the nominal silicon characteristics, at nominal operating conditions.
+  - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 3.7
+
+
+
++-------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary               ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 45.16 MHz ; 45.16 MHz       ; spi0_spclk ;      ;
+; 88.99 MHz ; 88.99 MHz       ; clk        ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-------------------------------------+
+; Slow 1200mV 0C Model Setup Summary  ;
++------------+--------+---------------+
+; Clock      ; Slack  ; End Point TNS ;
++------------+--------+---------------+
+; spi0_spclk ; -1.071 ; -1.071        ;
+; n/a        ; 1.542  ; 0.000         ;
+; clk        ; 4.597  ; 0.000         ;
++------------+--------+---------------+
+
+
++-------------------------------------+
+; Slow 1200mV 0C Model Hold Summary   ;
++------------+--------+---------------+
+; Clock      ; Slack  ; End Point TNS ;
++------------+--------+---------------+
+; clk        ; -0.036 ; -0.036        ;
+; spi0_spclk ; 0.352  ; 0.000         ;
+; n/a        ; 8.677  ; 0.000         ;
++------------+--------+---------------+
+
+
++---------------------------------------+
+; Slow 1200mV 0C Model Recovery Summary ;
++------------+--------+-----------------+
+; Clock      ; Slack  ; End Point TNS   ;
++------------+--------+-----------------+
+; spi0_spclk ; 4.239  ; 0.000           ;
+; clk        ; 15.556 ; 0.000           ;
++------------+--------+-----------------+
+
+
++--------------------------------------+
+; Slow 1200mV 0C Model Removal Summary ;
++------------+-------+-----------------+
+; Clock      ; Slack ; End Point TNS   ;
++------------+-------+-----------------+
+; clk        ; 0.885 ; 0.000           ;
+; spi0_spclk ; 5.077 ; 0.000           ;
++------------+-------+-----------------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++------------+--------+----------------------------+
+; Clock      ; Slack  ; End Point TNS              ;
++------------+--------+----------------------------+
+; clk        ; 4.787  ; 0.000                      ;
+; spi0_spclk ; 9.766  ; 0.000                      ;
+; ts_clk     ; 16.000 ; 0.000                      ;
++------------+--------+----------------------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+
+Number of Synchronizer Chains Found: 5
+Shortest Synchronizer Chain: 2 Registers
+Fraction of Chains for which MTBFs Could Not be Calculated: 0.600
+Worst Case Available Settling Time: 34.455 ns
+
+Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
+  - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.5
+Typical MTBF values are calculated based on the nominal silicon characteristics, at nominal operating conditions.
+  - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 3.7
+
+
+
++-------------------------------------+
+; Fast 1200mV 0C Model Setup Summary  ;
++------------+--------+---------------+
+; Clock      ; Slack  ; End Point TNS ;
++------------+--------+---------------+
+; spi0_spclk ; 3.098  ; 0.000         ;
+; clk        ; 6.672  ; 0.000         ;
+; n/a        ; 10.761 ; 0.000         ;
++------------+--------+---------------+
+
+
++-------------------------------------+
+; Fast 1200mV 0C Model Hold Summary   ;
++------------+--------+---------------+
+; Clock      ; Slack  ; End Point TNS ;
++------------+--------+---------------+
+; clk        ; -1.162 ; -1.162        ;
+; spi0_spclk ; 0.165  ; 0.000         ;
+; n/a        ; 1.491  ; 0.000         ;
++------------+--------+---------------+
+
+
++---------------------------------------+
+; Fast 1200mV 0C Model Recovery Summary ;
++------------+--------+-----------------+
+; Clock      ; Slack  ; End Point TNS   ;
++------------+--------+-----------------+
+; spi0_spclk ; 5.631  ; 0.000           ;
+; clk        ; 17.639 ; 0.000           ;
++------------+--------+-----------------+
+
+
++--------------------------------------+
+; Fast 1200mV 0C Model Removal Summary ;
++------------+-------+-----------------+
+; Clock      ; Slack ; End Point TNS   ;
++------------+-------+-----------------+
+; clk        ; 0.426 ; 0.000           ;
+; spi0_spclk ; 4.012 ; 0.000           ;
++------------+-------+-----------------+
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++------------+--------+----------------------------+
+; Clock      ; Slack  ; End Point TNS              ;
++------------+--------+----------------------------+
+; clk        ; 4.388  ; 0.000                      ;
+; spi0_spclk ; 9.253  ; 0.000                      ;
+; ts_clk     ; 16.000 ; 0.000                      ;
++------------+--------+----------------------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+
+Number of Synchronizer Chains Found: 5
+Shortest Synchronizer Chain: 2 Registers
+Fraction of Chains for which MTBFs Could Not be Calculated: 0.600
+Worst Case Available Settling Time: 37.849 ns
+
+Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
+  - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.5
+Typical MTBF values are calculated based on the nominal silicon characteristics, at nominal operating conditions.
+  - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 3.7
+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+--------+--------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+--------+----------+---------+---------------------+
+; Worst-case Slack ; -1.782 ; -1.162 ; 4.065    ; 0.426   ; 4.388               ;
+;  clk             ; 4.347  ; -1.162 ; 15.260   ; 0.426   ; 4.388               ;
+;  n/a             ; -0.211 ; 1.491  ; N/A      ; N/A     ; N/A                 ;
+;  spi0_spclk      ; -1.782 ; 0.165  ; 4.065    ; 4.012   ; 9.253               ;
+;  ts_clk          ; N/A    ; N/A    ; N/A      ; N/A     ; 16.000              ;
+; Design-wide TNS  ; -1.993 ; -1.162 ; 0.0      ; 0.0     ; 0.0                 ;
+;  clk             ; 0.000  ; -1.162 ; 0.000    ; 0.000   ; 0.000               ;
+;  n/a             ; -0.211 ; 0.000  ; N/A      ; N/A     ; N/A                 ;
+;  spi0_spclk      ; -1.782 ; 0.000  ; 0.000    ; 0.000   ; 0.000               ;
+;  ts_clk          ; N/A    ; N/A    ; N/A      ; N/A     ; 0.000               ;
++------------------+--------+--------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                   ;
++--------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin          ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++--------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; spi0_miso    ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ad_spi_cs    ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ad_spi_sclk  ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; spi5_spck    ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; spi5_npcs0   ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; spi5_mosi    ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; i2c_scl      ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; led_wifi     ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; tp_42        ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; rf_sw3       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; rf_sw4       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; xin_sms4470  ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ad_spi_sdio  ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; i2c_sda      ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_TDO~ ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++--------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++---------------------------------------------------------------------------------+
+; Input Transition Times                                                          ;
++---------------------+-----------------------+-----------------+-----------------+
+; Pin                 ; I/O Standard          ; 10-90 Rise Time ; 90-10 Fall Time ;
++---------------------+-----------------------+-----------------+-----------------+
+; ts_sync             ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; cnt_in[0]           ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; cnt_in[1]           ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; cnt_in[2]           ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; cnt_in[3]           ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; cnt_in[4]           ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; cnt_in[5]           ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; cnt_in[6]           ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; cnt_in[7]           ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; ad_spi_sdio         ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; i2c_sda             ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; prog_en             ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; spi0_npcs0          ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; spi0_spck           ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; resync_n            ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; ts_valid            ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; tp_50               ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; spi0_mosi           ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; gpio3               ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; gpio2               ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; xout_sms4470_m      ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; clk                 ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; ts_clk              ; 3.3-V LVCMOS          ; 2640 ps         ; 2640 ps         ;
+; ts_d0               ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; i2c_base_clk        ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; i2c_trig            ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_TMS~        ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_TCK~        ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_TDI~        ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_CONFIG_SEL~ ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_nCONFIG~    ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_nSTATUS~    ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_CONF_DONE~  ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
++---------------------+-----------------------+-----------------+-----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin          ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; spi0_miso    ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.128 V            ; 0.216 V                              ; 0.383 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.128 V           ; 0.216 V                             ; 0.383 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
+; ad_spi_cs    ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.128 V            ; 0.216 V                              ; 0.383 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.128 V           ; 0.216 V                             ; 0.383 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
+; ad_spi_sclk  ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.07e-08 V                   ; 3.18 V              ; -0.115 V            ; 0.266 V                              ; 0.229 V                              ; 4.69e-10 s                  ; 6.38e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.07e-08 V                  ; 3.18 V             ; -0.115 V           ; 0.266 V                             ; 0.229 V                             ; 4.69e-10 s                 ; 6.38e-10 s                 ; No                        ; No                        ;
+; spi5_spck    ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.128 V            ; 0.216 V                              ; 0.383 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.128 V           ; 0.216 V                             ; 0.383 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
+; spi5_npcs0   ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.18 V              ; -0.116 V            ; 0.266 V                              ; 0.229 V                              ; 4.69e-10 s                  ; 6.38e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.18 V             ; -0.116 V           ; 0.266 V                             ; 0.229 V                             ; 4.69e-10 s                 ; 6.38e-10 s                 ; No                        ; No                        ;
+; spi5_mosi    ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.07e-08 V                   ; 3.18 V              ; -0.115 V            ; 0.266 V                              ; 0.229 V                              ; 4.69e-10 s                  ; 6.38e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.07e-08 V                  ; 3.18 V             ; -0.115 V           ; 0.266 V                             ; 0.229 V                             ; 4.69e-10 s                 ; 6.38e-10 s                 ; No                        ; No                        ;
+; i2c_scl      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.128 V            ; 0.216 V                              ; 0.383 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.128 V           ; 0.216 V                             ; 0.383 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
+; led_wifi     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.126 V            ; 0.218 V                              ; 0.383 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.126 V           ; 0.218 V                             ; 0.383 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
+; tp_42        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.126 V            ; 0.218 V                              ; 0.383 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.126 V           ; 0.218 V                             ; 0.383 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
+; rf_sw3       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.126 V            ; 0.218 V                              ; 0.383 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.126 V           ; 0.218 V                             ; 0.383 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
+; rf_sw4       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.128 V            ; 0.216 V                              ; 0.383 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.128 V           ; 0.216 V                             ; 0.383 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
+; xin_sms4470  ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.09 V              ; -0.0046 V           ; 0.291 V                              ; 0.287 V                              ; 4.58e-09 s                  ; 4.9e-09 s                   ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.09 V             ; -0.0046 V          ; 0.291 V                             ; 0.287 V                             ; 4.58e-09 s                 ; 4.9e-09 s                  ; No                        ; No                        ;
+; ad_spi_sdio  ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.126 V            ; 0.218 V                              ; 0.383 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.126 V           ; 0.218 V                             ; 0.383 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
+; i2c_sda      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.128 V            ; 0.216 V                              ; 0.383 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.128 V           ; 0.216 V                             ; 0.383 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
+; ~ALTERA_TDO~ ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.126 V            ; 0.218 V                              ; 0.383 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.126 V           ; 0.218 V                             ; 0.383 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
++--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
++--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin          ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; spi0_miso    ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0684 V           ; 0.28 V                               ; 0.237 V                              ; 4.81e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0684 V          ; 0.28 V                              ; 0.237 V                             ; 4.81e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
+; ad_spi_cs    ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0684 V           ; 0.28 V                               ; 0.237 V                              ; 4.81e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0684 V          ; 0.28 V                              ; 0.237 V                             ; 4.81e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
+; ad_spi_sclk  ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0624 V           ; 0.177 V                              ; 0.312 V                              ; 6.42e-10 s                  ; 6.7e-10 s                   ; No                         ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0624 V          ; 0.177 V                             ; 0.312 V                             ; 6.42e-10 s                 ; 6.7e-10 s                  ; No                        ; No                        ;
+; spi5_spck    ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0684 V           ; 0.28 V                               ; 0.237 V                              ; 4.81e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0684 V          ; 0.28 V                              ; 0.237 V                             ; 4.81e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
+; spi5_npcs0   ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0638 V           ; 0.177 V                              ; 0.312 V                              ; 6.42e-10 s                  ; 6.7e-10 s                   ; No                         ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0638 V          ; 0.177 V                             ; 0.312 V                             ; 6.42e-10 s                 ; 6.7e-10 s                  ; No                        ; No                        ;
+; spi5_mosi    ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0624 V           ; 0.177 V                              ; 0.312 V                              ; 6.42e-10 s                  ; 6.7e-10 s                   ; No                         ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0624 V          ; 0.177 V                             ; 0.312 V                             ; 6.42e-10 s                 ; 6.7e-10 s                  ; No                        ; No                        ;
+; i2c_scl      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0684 V           ; 0.28 V                               ; 0.237 V                              ; 4.81e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0684 V          ; 0.28 V                              ; 0.237 V                             ; 4.81e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
+; led_wifi     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0682 V           ; 0.279 V                              ; 0.237 V                              ; 4.81e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0682 V          ; 0.279 V                             ; 0.237 V                             ; 4.81e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
+; tp_42        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0682 V           ; 0.279 V                              ; 0.237 V                              ; 4.81e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0682 V          ; 0.279 V                             ; 0.237 V                             ; 4.81e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
+; rf_sw3       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0682 V           ; 0.279 V                              ; 0.237 V                              ; 4.81e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0682 V          ; 0.279 V                             ; 0.237 V                             ; 4.81e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
+; rf_sw4       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0684 V           ; 0.28 V                               ; 0.237 V                              ; 4.81e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0684 V          ; 0.28 V                              ; 0.237 V                             ; 4.81e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
+; xin_sms4470  ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.09 V              ; -0.0026 V           ; 0.276 V                              ; 0.251 V                              ; 5.46e-09 s                  ; 6.08e-09 s                  ; No                         ; Yes                        ; 3.08 V                      ; 1.3e-06 V                   ; 3.09 V             ; -0.0026 V          ; 0.276 V                             ; 0.251 V                             ; 5.46e-09 s                 ; 6.08e-09 s                 ; No                        ; Yes                       ;
+; ad_spi_sdio  ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0682 V           ; 0.279 V                              ; 0.237 V                              ; 4.81e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0682 V          ; 0.279 V                             ; 0.237 V                             ; 4.81e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
+; i2c_sda      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0684 V           ; 0.28 V                               ; 0.237 V                              ; 4.81e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0684 V          ; 0.28 V                              ; 0.237 V                             ; 4.81e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
+; ~ALTERA_TDO~ ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0682 V           ; 0.279 V                              ; 0.237 V                              ; 4.81e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0682 V          ; 0.279 V                             ; 0.237 V                             ; 4.81e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
++--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin          ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; spi0_miso    ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.65 V              ; -0.0209 V           ; 0.391 V                              ; 0.09 V                               ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.65 V             ; -0.0209 V          ; 0.391 V                             ; 0.09 V                              ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
+; ad_spi_cs    ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.65 V              ; -0.0209 V           ; 0.391 V                              ; 0.09 V                               ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.65 V             ; -0.0209 V          ; 0.391 V                             ; 0.09 V                              ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
+; ad_spi_sclk  ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.63 V              ; -0.0257 V           ; 0.468 V                              ; 0.138 V                              ; 3.02e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.63 V             ; -0.0257 V          ; 0.468 V                             ; 0.138 V                             ; 3.02e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
+; spi5_spck    ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.65 V              ; -0.0209 V           ; 0.391 V                              ; 0.09 V                               ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.65 V             ; -0.0209 V          ; 0.391 V                             ; 0.09 V                              ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
+; spi5_npcs0   ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.63 V              ; -0.0264 V           ; 0.468 V                              ; 0.142 V                              ; 3.02e-10 s                  ; 4.42e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.63 V             ; -0.0264 V          ; 0.468 V                             ; 0.142 V                             ; 3.02e-10 s                 ; 4.42e-10 s                 ; No                        ; Yes                       ;
+; spi5_mosi    ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.63 V              ; -0.0257 V           ; 0.468 V                              ; 0.138 V                              ; 3.02e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.63 V             ; -0.0257 V          ; 0.468 V                             ; 0.138 V                             ; 3.02e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
+; i2c_scl      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.65 V              ; -0.0209 V           ; 0.391 V                              ; 0.09 V                               ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.65 V             ; -0.0209 V          ; 0.391 V                             ; 0.09 V                              ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
+; led_wifi     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0201 V           ; 0.391 V                              ; 0.088 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0201 V          ; 0.391 V                             ; 0.088 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
+; tp_42        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0201 V           ; 0.391 V                              ; 0.088 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0201 V          ; 0.391 V                             ; 0.088 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
+; rf_sw3       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0201 V           ; 0.391 V                              ; 0.088 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0201 V          ; 0.391 V                             ; 0.088 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
+; rf_sw4       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.65 V              ; -0.0209 V           ; 0.391 V                              ; 0.09 V                               ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.65 V             ; -0.0209 V          ; 0.391 V                             ; 0.09 V                              ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
+; xin_sms4470  ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.48 V              ; -0.00721 V          ; 0.333 V                              ; 0.329 V                              ; 3.62e-09 s                  ; 4.03e-09 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.48 V             ; -0.00721 V         ; 0.333 V                             ; 0.329 V                             ; 3.62e-09 s                 ; 4.03e-09 s                 ; No                        ; Yes                       ;
+; ad_spi_sdio  ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0201 V           ; 0.391 V                              ; 0.088 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0201 V          ; 0.391 V                             ; 0.088 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
+; i2c_sda      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.65 V              ; -0.0209 V           ; 0.391 V                              ; 0.09 V                               ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.65 V             ; -0.0209 V          ; 0.391 V                             ; 0.09 V                              ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_TDO~ ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0201 V           ; 0.391 V                              ; 0.088 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0201 V          ; 0.391 V                             ; 0.088 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
++--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++---------------------------------------------------------------------+
+; Setup Transfers                                                     ;
++------------+------------+----------+----------+----------+----------+
+; From Clock ; To Clock   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+------------+----------+----------+----------+----------+
+; clk        ; clk        ; 11079    ; 223      ; 20       ; 0        ;
+; spi0_spclk ; clk        ; 3        ; 1        ; 0        ; 0        ;
+; ts_clk     ; clk        ; 1        ; 1        ; 0        ; 0        ;
+; clk        ; spi0_spclk ; 1        ; 0        ; 0        ; 0        ;
+; spi0_spclk ; spi0_spclk ; 60       ; 2        ; 5        ; 39       ;
++------------+------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------+
+; Hold Transfers                                                      ;
++------------+------------+----------+----------+----------+----------+
+; From Clock ; To Clock   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+------------+----------+----------+----------+----------+
+; clk        ; clk        ; 11079    ; 223      ; 20       ; 0        ;
+; spi0_spclk ; clk        ; 3        ; 1        ; 0        ; 0        ;
+; ts_clk     ; clk        ; 1        ; 1        ; 0        ; 0        ;
+; clk        ; spi0_spclk ; 1        ; 0        ; 0        ; 0        ;
+; spi0_spclk ; spi0_spclk ; 60       ; 2        ; 5        ; 39       ;
++------------+------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------+
+; Recovery Transfers                                                  ;
++------------+------------+----------+----------+----------+----------+
+; From Clock ; To Clock   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+------------+----------+----------+----------+----------+
+; clk        ; clk        ; 204      ; 0        ; 0        ; 0        ;
+; spi0_spclk ; spi0_spclk ; 5        ; 0        ; 11       ; 0        ;
++------------+------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------+
+; Removal Transfers                                                   ;
++------------+------------+----------+----------+----------+----------+
+; From Clock ; To Clock   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+------------+----------+----------+----------+----------+
+; clk        ; clk        ; 204      ; 0        ; 0        ; 0        ;
+; spi0_spclk ; spi0_spclk ; 5        ; 0        ; 11       ; 0        ;
++------------+------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 2     ; 2    ;
+; Unconstrained Input Ports       ; 10    ; 10   ;
+; Unconstrained Input Port Paths  ; 67    ; 67   ;
+; Unconstrained Output Ports      ; 10    ; 10   ;
+; Unconstrained Output Port Paths ; 13    ; 13   ;
++---------------------------------+-------+------+
+
+
++--------------------------------------------------+
+; Clock Status Summary                             ;
++--------------+------------+------+---------------+
+; Target       ; Clock      ; Type ; Status        ;
++--------------+------------+------+---------------+
+; clk          ; clk        ; Base ; Constrained   ;
+; data_start   ;            ; Base ; Unconstrained ;
+; i2c_base_clk ;            ; Base ; Unconstrained ;
+; spi0_spck    ; spi0_spclk ; Base ; Constrained   ;
+; ts_clk       ; ts_clk     ; Base ; Constrained   ;
++--------------+------------+------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                             ;
++----------------+--------------------------------------------------------------------------------------+
+; Input Port     ; Comment                                                                              ;
++----------------+--------------------------------------------------------------------------------------+
+; gpio2          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; gpio3          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; i2c_sda        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; i2c_trig       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; prog_en        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; resync_n       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tp_50          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; xout_sms4470_m ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++----------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; ad_spi_cs   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; i2c_scl     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; i2c_sda     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led_wifi    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rf_sw3      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rf_sw4      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; spi0_miso   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tp_42       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; xin_sms4470 ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                             ;
++----------------+--------------------------------------------------------------------------------------+
+; Input Port     ; Comment                                                                              ;
++----------------+--------------------------------------------------------------------------------------+
+; gpio2          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; gpio3          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; i2c_sda        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; i2c_trig       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; prog_en        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; resync_n       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tp_50          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; xout_sms4470_m ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++----------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; ad_spi_cs   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; i2c_scl     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; i2c_sda     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led_wifi    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rf_sw3      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rf_sw4      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; spi0_miso   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tp_42       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; xin_sms4470 ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
+    Info: Processing started: Mon Nov 21 16:17:46 2016
+Info: Command: quartus_sta lgdst_rxglue -c lgdst_rxglue
+Info: qsta_default_script.tcl version: #1
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 2 combinational loops as latches.
+Info (332164): Evaluating HDL-embedded SDC commands
+    Info (332165): Entity altera_std_synchronizer
+        Info (332166): set_false_path -to [get_keepers {*altera_std_synchronizer:*|din_s1}]
+Info (332104): Reading SDC File: 'onchip_flash/synthesis/submodules/altera_onchip_flash.sdc'
+Info (332104): Reading SDC File: '../rtl/lgdst_rxglue.sdc'
+Warning (332060): Node: i2c_base_clk was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register i2c_dummy:i_i2c|scl_reg is being clocked by i2c_base_clk
+Warning (332060): Node: data_start was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Latch spi0_miso_ver is being clocked by data_start
+Warning (332056): PLL cross checking found inconsistent PLL clock settings:
+    Warning (332056): Node: i_ufm_spi|i_flash|onchip_flash_0|altera_onchip_flash_block|ufm_block|osc was found missing 1 generated clock that corresponds to a base clock with a period of: 181.818
+    Warning (332056): Node: i_pll|altpll_component|auto_generated|pll1|clk[0] was found missing 1 generated clock that corresponds to a base clock with a period of: 20.000
+Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning (332169): From clk (Rise) to clk (Rise) (setup and hold)
+    Critical Warning (332169): From clk (Fall) to clk (Rise) (setup and hold)
+    Critical Warning (332169): From ts_clk (Rise) to clk (Rise) (setup and hold)
+    Critical Warning (332169): From ts_clk (Fall) to clk (Rise) (setup and hold)
+    Critical Warning (332169): From spi0_spclk (Rise) to clk (Rise) (setup and hold)
+    Critical Warning (332169): From spi0_spclk (Fall) to clk (Rise) (setup and hold)
+    Critical Warning (332169): From clk (Rise) to clk (Fall) (setup and hold)
+    Critical Warning (332169): From clk (Rise) to spi0_spclk (Rise) (setup and hold)
+    Critical Warning (332169): From spi0_spclk (Rise) to spi0_spclk (Rise) (setup and hold)
+    Critical Warning (332169): From spi0_spclk (Fall) to spi0_spclk (Rise) (setup and hold)
+    Critical Warning (332169): From spi0_spclk (Rise) to spi0_spclk (Fall) (setup and hold)
+    Critical Warning (332169): From spi0_spclk (Fall) to spi0_spclk (Fall) (setup and hold)
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.782
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.782              -1.782 spi0_spclk 
+    Info (332119):    -0.211              -0.211 n/a 
+    Info (332119):     4.347               0.000 clk 
+Info (332146): Worst-case hold slack is 0.221
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.221               0.000 clk 
+    Info (332119):     0.394               0.000 spi0_spclk 
+    Info (332119):     9.999               0.000 n/a 
+Info (332146): Worst-case recovery slack is 4.065
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.065               0.000 spi0_spclk 
+    Info (332119):    15.260               0.000 clk 
+Info (332146): Worst-case removal slack is 1.017
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.017               0.000 clk 
+    Info (332119):     5.401               0.000 spi0_spclk 
+Info (332146): Worst-case minimum pulse width slack is 4.768
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.768               0.000 clk 
+    Info (332119):     9.706               0.000 spi0_spclk 
+    Info (332119):    16.000               0.000 ts_clk 
+Info (332114): Report Metastability: Found 5 synchronizer chains.
+    Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+    Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+
+    Info (332114): Number of Synchronizer Chains Found: 5
+    Info (332114): Shortest Synchronizer Chain: 2 Registers
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.600
+    Info (332114): Worst Case Available Settling Time: 34.077 ns
+    Info (332114): 
+    Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
+    Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.5
+    Info (332114): Typical MTBF values are calculated based on the nominal silicon characteristics, at nominal operating conditions.
+    Info (332114):   - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 3.7
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Warning (332060): Node: i2c_base_clk was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register i2c_dummy:i_i2c|scl_reg is being clocked by i2c_base_clk
+Warning (332060): Node: data_start was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Latch spi0_miso_ver is being clocked by data_start
+Warning (332056): PLL cross checking found inconsistent PLL clock settings:
+    Warning (332056): Node: i_ufm_spi|i_flash|onchip_flash_0|altera_onchip_flash_block|ufm_block|osc was found missing 1 generated clock that corresponds to a base clock with a period of: 181.818
+    Warning (332056): Node: i_pll|altpll_component|auto_generated|pll1|clk[0] was found missing 1 generated clock that corresponds to a base clock with a period of: 20.000
+Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning (332169): From clk (Rise) to clk (Rise) (setup and hold)
+    Critical Warning (332169): From clk (Fall) to clk (Rise) (setup and hold)
+    Critical Warning (332169): From ts_clk (Rise) to clk (Rise) (setup and hold)
+    Critical Warning (332169): From ts_clk (Fall) to clk (Rise) (setup and hold)
+    Critical Warning (332169): From spi0_spclk (Rise) to clk (Rise) (setup and hold)
+    Critical Warning (332169): From spi0_spclk (Fall) to clk (Rise) (setup and hold)
+    Critical Warning (332169): From clk (Rise) to clk (Fall) (setup and hold)
+    Critical Warning (332169): From clk (Rise) to spi0_spclk (Rise) (setup and hold)
+    Critical Warning (332169): From spi0_spclk (Rise) to spi0_spclk (Rise) (setup and hold)
+    Critical Warning (332169): From spi0_spclk (Fall) to spi0_spclk (Rise) (setup and hold)
+    Critical Warning (332169): From spi0_spclk (Rise) to spi0_spclk (Fall) (setup and hold)
+    Critical Warning (332169): From spi0_spclk (Fall) to spi0_spclk (Fall) (setup and hold)
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.071
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.071              -1.071 spi0_spclk 
+    Info (332119):     1.542               0.000 n/a 
+    Info (332119):     4.597               0.000 clk 
+Info (332146): Worst-case hold slack is -0.036
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.036              -0.036 clk 
+    Info (332119):     0.352               0.000 spi0_spclk 
+    Info (332119):     8.677               0.000 n/a 
+Info (332146): Worst-case recovery slack is 4.239
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.239               0.000 spi0_spclk 
+    Info (332119):    15.556               0.000 clk 
+Info (332146): Worst-case removal slack is 0.885
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.885               0.000 clk 
+    Info (332119):     5.077               0.000 spi0_spclk 
+Info (332146): Worst-case minimum pulse width slack is 4.787
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.787               0.000 clk 
+    Info (332119):     9.766               0.000 spi0_spclk 
+    Info (332119):    16.000               0.000 ts_clk 
+Info (332114): Report Metastability: Found 5 synchronizer chains.
+    Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+    Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+
+    Info (332114): Number of Synchronizer Chains Found: 5
+    Info (332114): Shortest Synchronizer Chain: 2 Registers
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.600
+    Info (332114): Worst Case Available Settling Time: 34.455 ns
+    Info (332114): 
+    Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
+    Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.5
+    Info (332114): Typical MTBF values are calculated based on the nominal silicon characteristics, at nominal operating conditions.
+    Info (332114):   - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 3.7
+Info: Analyzing Fast 1200mV 0C Model
+Warning (332060): Node: i2c_base_clk was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register i2c_dummy:i_i2c|scl_reg is being clocked by i2c_base_clk
+Warning (332060): Node: data_start was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Latch spi0_miso_ver is being clocked by data_start
+Warning (332056): PLL cross checking found inconsistent PLL clock settings:
+    Warning (332056): Node: i_ufm_spi|i_flash|onchip_flash_0|altera_onchip_flash_block|ufm_block|osc was found missing 1 generated clock that corresponds to a base clock with a period of: 181.818
+    Warning (332056): Node: i_pll|altpll_component|auto_generated|pll1|clk[0] was found missing 1 generated clock that corresponds to a base clock with a period of: 20.000
+Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning (332169): From clk (Rise) to clk (Rise) (setup and hold)
+    Critical Warning (332169): From clk (Fall) to clk (Rise) (setup and hold)
+    Critical Warning (332169): From ts_clk (Rise) to clk (Rise) (setup and hold)
+    Critical Warning (332169): From ts_clk (Fall) to clk (Rise) (setup and hold)
+    Critical Warning (332169): From spi0_spclk (Rise) to clk (Rise) (setup and hold)
+    Critical Warning (332169): From spi0_spclk (Fall) to clk (Rise) (setup and hold)
+    Critical Warning (332169): From clk (Rise) to clk (Fall) (setup and hold)
+    Critical Warning (332169): From clk (Rise) to spi0_spclk (Rise) (setup and hold)
+    Critical Warning (332169): From spi0_spclk (Rise) to spi0_spclk (Rise) (setup and hold)
+    Critical Warning (332169): From spi0_spclk (Fall) to spi0_spclk (Rise) (setup and hold)
+    Critical Warning (332169): From spi0_spclk (Rise) to spi0_spclk (Fall) (setup and hold)
+    Critical Warning (332169): From spi0_spclk (Fall) to spi0_spclk (Fall) (setup and hold)
+Info (332146): Worst-case setup slack is 3.098
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     3.098               0.000 spi0_spclk 
+    Info (332119):     6.672               0.000 clk 
+    Info (332119):    10.761               0.000 n/a 
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case hold slack is -1.162
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.162              -1.162 clk 
+    Info (332119):     0.165               0.000 spi0_spclk 
+    Info (332119):     1.491               0.000 n/a 
+Info (332146): Worst-case recovery slack is 5.631
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     5.631               0.000 spi0_spclk 
+    Info (332119):    17.639               0.000 clk 
+Info (332146): Worst-case removal slack is 0.426
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.426               0.000 clk 
+    Info (332119):     4.012               0.000 spi0_spclk 
+Info (332146): Worst-case minimum pulse width slack is 4.388
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.388               0.000 clk 
+    Info (332119):     9.253               0.000 spi0_spclk 
+    Info (332119):    16.000               0.000 ts_clk 
+Info (332114): Report Metastability: Found 5 synchronizer chains.
+    Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+    Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+
+    Info (332114): Number of Synchronizer Chains Found: 5
+    Info (332114): Shortest Synchronizer Chain: 2 Registers
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.600
+    Info (332114): Worst Case Available Settling Time: 37.849 ns
+    Info (332114): 
+    Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
+    Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.5
+    Info (332114): Typical MTBF values are calculated based on the nominal silicon characteristics, at nominal operating conditions.
+    Info (332114):   - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 3.7
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 58 warnings
+    Info: Peak virtual memory: 872 megabytes
+    Info: Processing ended: Mon Nov 21 16:17:49 2016
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+
