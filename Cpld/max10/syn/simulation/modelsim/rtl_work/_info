@@ -1,0 +1,94 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/simulation/modelsim
+vio_buf
+Z1 !s110 1466715802
+!i10b 1
+!s100 zV>BjcN?mVZd4KWFVU;X12
+IDAIHHECC6Nb^_dS03mk9e3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1466714940
+Z4 8C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/db/io_buf.v
+Z5 FC:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/db/io_buf.v
+L0 111
+Z6 OV;L;10.4b;61
+r1
+!s85 0
+31
+Z7 !s108 1466715802.000000
+Z8 !s107 C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/db/io_buf.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/db|C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/db/io_buf.v|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/db
+vio_buf_iobuf_bidir_loo
+R1
+!i10b 1
+!s100 G0l4Dm17o5glomGDf>Uz80
+IP>jTe13<dji?^4U6ABJGU0
+R2
+R0
+R3
+R4
+R5
+L0 47
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vlgdst_rxglue
+R1
+!i10b 1
+!s100 :1=Kh^O9[Ln4_o[5=N[a93
+Ij4:[<H>;7=@G_K297<VS]0
+R2
+R0
+w1466714911
+8C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/rtl/lgdst_rxglue.v
+FC:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/rtl/lgdst_rxglue.v
+L0 8
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/rtl/ver_info.v|C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/rtl/lgdst_rxglue.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/rtl|C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/rtl/lgdst_rxglue.v|
+!i113 1
+R10
+!s92 -vlog01compat -work work +incdir+C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/rtl
+vtest_lgdst_rxglue
+R1
+!i10b 1
+!s100 IIEl>OaVl@3;WdPdDPcE_2
+IlfkblIg@;<zb`:MIoZ[^=2
+R2
+R0
+w1464988813
+8C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v
+FC:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v
+L0 3
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench|C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench/test_lgdst_rxglue.v|
+!i113 1
+R10
+!s92 -vlog01compat -work work +incdir+C:/sncvs/rxcpld/working/rxcpld160513_v2_pin_test/syn/../testbench
