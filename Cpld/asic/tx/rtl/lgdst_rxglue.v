@@ -63,7 +63,7 @@ module lgdst_rxglue (
  end
 */
  // Signals for ADRF_brg, liyenho
- reg  [3:0]    spi0_ck_cnt = 4'd0;
+ reg  [3:0]    spi0_ck_cnt = 4'd10;
  reg           ad_spi_rw   = 1'b0;
  reg           ad_spi_oe_b = 1'b1;
  reg           spi_rw = 1'b0;
@@ -85,13 +85,13 @@ module lgdst_rxglue (
   begin
     if (spi0_cs)
     begin
-      spi0_ck_cnt <= 4'd8;
+      spi0_ck_cnt <= 4'd10;
       ad_spi_rw <= 1'd0;
 		spi_rw <= 1'd0;
     end
     else
     begin
-	   spi_rw <= (spi0_ck_cnt==4'd8)? spi0_mosi : spi_rw;
+	   spi_rw <= (spi0_ck_cnt==4'd10)? spi0_mosi : spi_rw;
       spi0_ck_cnt <= spi0_ck_cnt + {4{|spi0_ck_cnt}};
       ad_spi_rw <= (~|spi0_ck_cnt[2:1] & spi0_ck_cnt[0])? spi_rw:
                    ad_spi_rw;
