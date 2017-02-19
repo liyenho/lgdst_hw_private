@@ -38,7 +38,7 @@ module lgdst_rxglue (
 );
 
  // Signals for ADRF_brg
- reg  [3:0]    spi0_ck_cnt = 4'd0;
+ reg  [3:0]    spi0_ck_cnt = 4'd8;
  reg           ad_spi_rw   = 1'b0;
  reg           ad_spi_oe_b = 1'b1;
  reg           spi_rw = 1'b0;
