@@ -17,6 +17,10 @@ module lgdst_rxglue (
 
 	inout       ad_spi_sdio,
 
+	input 		spi_clk,
+	input		 spi_cs,
+	input		spi_mosi,
+
 	 output reg  ts_sync,
 	 output      ts_valid,
 	 output      ts_clk,

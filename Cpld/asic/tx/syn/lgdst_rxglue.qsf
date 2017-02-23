@@ -102,20 +102,28 @@ set_location_assignment PIN_H8 -to ts_d6
 set_location_assignment PIN_A1 -to ts_d7
 set_location_assignment PIN_B1 -to ts_fail
 set_location_assignment PIN_H7 -to reset
-set_location_assignment PIN_A2 -to i2sck0
-set_location_assignment PIN_A4 -to i2sdi0
-set_location_assignment PIN_A8 -to i2smclk
-set_location_assignment PIN_A3 -to i2sws0
 set_location_assignment PIN_B8 -to spi_rts
 set_location_assignment PIN_A6 -to i2sdo0
-set_location_assignment PIN_C5 -to spi0_cs
+set_location_assignment PIN_A2 -to spi0_cs
+set_location_assignment PIN_A8 -to spi0_mosi
+set_location_assignment PIN_F6 -to ad_spi_sdio
+set_location_assignment PIN_A3 -to spi0_clk
+set_location_assignment PIN_A4 -to spi0_miso
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi0_cs
-set_location_assignment PIN_C8 -to spi0_mosi
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi0_mosi
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ts_d4
-set_location_assignment PIN_F6 -to ad_spi_sdio
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ad_spi_sdio
-set_location_assignment PIN_F8 -to spi0_clk
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi0_clk
-set_location_assignment PIN_C6 -to spi0_miso
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi0_miso
+set_location_assignment PIN_F8 -to spi_clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_clk
+set_location_assignment PIN_C5 -to spi_cs
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_cs
+set_instance_assignment -name RESERVE_PIN AS_INPUT_TRI_STATED -to spi_clk
+set_instance_assignment -name RESERVE_PIN AS_INPUT_TRI_STATED -to spi_cs
+set_location_assignment PIN_C8 -to spi_mosi
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_mosi
+set_instance_assignment -name RESERVE_PIN AS_INPUT_TRI_STATED -to spi_mosi
