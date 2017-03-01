@@ -97,7 +97,7 @@ module lgdst_rxglue (
     begin
 	   spi_rw <= (spi0_ck_cnt==4'd10)? spi0_mosi : spi_rw;
       spi0_ck_cnt <= spi0_ck_cnt + {4{|spi0_ck_cnt}};
-      ad_spi_rw <= (~|spi0_ck_cnt[2:1] & spi0_ck_cnt[0])? spi_rw:
+      ad_spi_rw <= (~|spi0_ck_cnt[3:1] & spi0_ck_cnt[0])? spi_rw:
                    ad_spi_rw;
     end
   end
