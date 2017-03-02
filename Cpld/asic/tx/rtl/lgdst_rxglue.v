@@ -29,9 +29,9 @@ module lgdst_rxglue (
  reg     		spi_ck_cnt ;
  reg			spi_mosi_1clk = 1'b0;
  //assigning the tsclk signal
- assign ts_clk = (!reset)? 1'b1: spi_clk;
- assign ts_valid = (!reset)? 1'b1: (~spi_cs);
- assign ts_d0 = (!reset)? 1'b1: /*spi_mosi*/spi_mosi_1clk;
+ assign ts_clk = (!reset)? 1'b0: spi_clk;
+ assign ts_valid = (!reset)? 1'b0: (~spi_cs);
+ assign ts_d0 = (!reset)? 1'b0: /*spi_mosi*/spi_mosi_1clk;
 
  always @ (posedge spi_clk or negedge reset)
  begin
