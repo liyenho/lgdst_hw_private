@@ -36,7 +36,10 @@ module lgdst_rxglue (
  always @ (posedge spi_clk or negedge reset)
  begin
   if (!reset)
+  begin
+   spi_mosi_1clk = 1'b0;
 	ts_sync <= 1'b0;
+  end
   else
   begin
    //if (1'b1 == spi_clk)
@@ -59,8 +62,8 @@ module lgdst_rxglue (
 	spi_ck_cnt <= 1'b1;
   if (1'b1 == spi_cs)
  	spi_ck_cnt <= 1'b1;  // reset 1 bit cnt
-  else
-   spi_ck_cnt <= spi_ck_cnt+spi_ck_cnt;
+  else if (1'b1 == spi_clk)
+   spi_ck_cnt <= 0;
  end
 
  // Signals for ADRF_brg, liyenho
