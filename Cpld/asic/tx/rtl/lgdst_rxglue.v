@@ -33,18 +33,14 @@ module lgdst_rxglue (
  assign ts_valid = (!reset)? 1'b0: (~spi_cs);
  assign ts_d0 = (!reset)? 1'b0: /*spi_mosi*/spi_mosi_1clk;
 
- always @ (posedge spi_clk or negedge reset)
+ always @ (negedge spi_clk or negedge reset)
  begin
   if (!reset)
-  begin
-   spi_mosi_1clk = 1'b0;
 	ts_sync <= 1'b0;
-  end
   else
   begin
-   //if (1'b1 == spi_clk)
+   //if (1'b0 == spi_clk)
 	begin
-  	 spi_mosi_1clk <= spi_mosi; // 1 clk delay copy of spi_mosi
 	 //if(spi_cs == 1'b0)
 	 begin
 	  if (1'b1 == spi_ck_cnt)
@@ -56,15 +52,21 @@ module lgdst_rxglue (
 	end
  end
 
- always @ (posedge spi_clk or posedge spi_cs or negedge reset)
+ always @ (negedge spi_clk or posedge spi_cs or negedge reset)
  begin
   if (!reset)
 	spi_ck_cnt <= 1'b1;
   if (1'b1 == spi_cs)
  	spi_ck_cnt <= 1'b1;  // reset 1 bit cnt
-  else if (1'b1 == spi_clk)
+  else if (1'b0 == spi_clk)
    spi_ck_cnt <= 0;
  end
+
+ always @ (posedge spi_clk or negedge reset)
+  if (!reset)
+   spi_mosi_1clk = 1'b0;
+  else	
+  	 spi_mosi_1clk <= spi_mosi; // 1 clk delay copy of spi_mosi
 
  // Signals for ADRF_brg, liyenho
  reg  [3:0]    spi0_ck_cnt = 4'd10;
