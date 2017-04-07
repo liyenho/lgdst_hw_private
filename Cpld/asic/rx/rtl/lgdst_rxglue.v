@@ -15,8 +15,7 @@ module lgdst_rxglue (
   input             spi0_mosi,
   output            spi0_miso,
 
-  //for debugging
-  //output            i2c_sclk1, //for debugging
+  output            i2c_sclk1, 
   input             i2c_sda1,
   output            ad_spi_cs,
   output            ad_spi_sclk,
@@ -98,6 +97,7 @@ module lgdst_rxglue (
    ts_mosi <= ts_d0_prelatch;
  end
 
+ assign i2c_sclk1 = ts_fail;
  //for debugging purpose
  //assign i2c_sclk1 = pattern;
  reg pattern=1'b0;
