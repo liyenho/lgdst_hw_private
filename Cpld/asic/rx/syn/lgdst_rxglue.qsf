@@ -108,3 +108,5 @@ set_location_assignment PIN_A6 -to ts_ce
 set_location_assignment PIN_A8 -to ts_miso
 set_location_assignment PIN_B2 -to ts_mosi
 set_location_assignment PIN_A3 -to i2c_sda1
+set_location_assignment PIN_A4 -to i2c_sclk1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to i2c_sclk1
