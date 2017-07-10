@@ -1,0 +1,19 @@
+Quartus Prime Archive log --	C:/sncvs/rxcpld/rxcpld_160326_yh/syn/lgdst_rxglue160327_pkt4cnt.qarlog
+
+Archive:	C:/sncvs/rxcpld/rxcpld_160326_yh/syn/lgdst_rxglue160327_pkt4cnt.qar
+Date:		Sun Mar 27 21:51:08 2016
+Quartus Prime		15.1.0 Build 185 10/21/2015 SJ Standard Edition
+
+	=========== Files Selected: ===========
+C:/sncvs/rxcpld/rxcpld_160326_yh/rtl/lgdst_rxglue.sdc
+C:/sncvs/rxcpld/rxcpld_160326_yh/rtl/lgdst_rxglue.v
+C:/sncvs/rxcpld/rxcpld_160326_yh/syn/lgdst_rxglue.qpf
+C:/sncvs/rxcpld/rxcpld_160326_yh/syn/lgdst_rxglue.qsf
+C:/sncvs/rxcpld/rxcpld_160326_yh/syn/output_files/Chain1.cdf
+C:/sncvs/rxcpld/rxcpld_160326_yh/syn/output_files/pin_check.cdf
+C:/sncvs/rxcpld/rxcpld_160326_yh/syn/output_files/pin_test.cdf
+c:/altera/15.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 8 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

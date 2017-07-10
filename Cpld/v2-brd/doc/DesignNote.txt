@@ -1,0 +1,15 @@
+RF6612 connect to CPLD
+  Liyen's comment: SAM's SPI0 (PA25-26, PA9-10, PB0)
+
+SPI5 for TS video (CPLD)
+  Liyen's comment: it is correct 
+
+USART6(RXD6, TXD6) for logging using PB0/1 from mistaken SPI1
+TWI2(RXD2, TXD2) for SMS comm using PA5/6 from original I2S: it is correct
+
+RESET for TM023 via PA25: it is correct
+RESET for SMS4470 via PB15
+  Liyen's comment ??
+
+HOST_INT connect to CPLD
+  Liyen's comment: connect to PA26 through a jump wire
